@@ -15,8 +15,7 @@ module Tolken
             options = {
               input_html: {
                 name: "#{object.class.to_s.downcase}[#{attribute_name}][#{locale}]",
-                value: object.public_send(attribute_name)[locale],
-                class: "lang__#{locale}"
+                value: object.public_send(attribute_name)[locale]
               },
               as: input_options[:type].presence || :string
             }
